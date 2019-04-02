@@ -5,6 +5,22 @@
 ### MIT License 
 ###
 ### ESC POS Command is referring to EPSON & Star Micronics Co., Ltd.
+### Dynamic length of command is not support eg: print image
+### Eg:
+### 
+### - 1B 28 42 nL nH k m s v1 v2 c BarCodeData
+### - 1B 26 00 n m [a0 a1 a2 d1 d2 ... dk]
+### - 1B 26 00 n m 0 [a 0 d1 d2 ... dk]
+### - 1B 2E c v h m nL nH d1 d2 ... dk
+### - 1B 26 00 n m [a d1 d2 ... dk]
+### - 1B 28 5E nL nH d1 ... dk
+### - 1B 4B nL nH d1 d2 ... dk
+### - 1B 4C nL nH d1 d2 ... dk
+### - 1B 59 nL nH d1 d2 ... dk
+### - 1B 5A nL nH d1 d2 ... dk
+### - 1B 2A m nL nH d1 ... dk
+### - 1B 5E m nL nH d1 ... dk
+### - 1B 2E 2 v h 1 0 0
 #############################################
 
 from collections import defaultdict
